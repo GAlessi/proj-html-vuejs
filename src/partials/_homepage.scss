@@ -27,8 +27,25 @@
 
         nav{
             height: 80px;
-            width: 100%;
             padding: 0 50px;
+            @include flex;
+            justify-content:space-around;
+
+            img{
+                width: 200px;
+            }
+
+            .links{
+                @include flex;
+
+                li{
+                    margin-right: 20px;
+
+                    i{
+                        font-size: 10px;
+                    }
+                }
+            }
         }
     }
 
@@ -127,12 +144,14 @@
                 h3{
                     font-size: 40px;
                     margin: 20px 0 40px 0;
+                    line-height: 60px;
                 }
             }
 
             .coachDescription{
                 width: 50%;
                 text-align: left;
+                margin-top: 20px;
 
                 p{
                     margin: 20px 0;
@@ -141,6 +160,8 @@
                 }
                 .buttonSecondary{
                     @include buttonSecondary;
+                    display: inline-block;
+                    margin-top: 30px;
                 }
             }
         }
@@ -157,18 +178,17 @@
                 border-radius: 5px;
                 background-image: url("img/artist-video-poster.jpg");
                 background-repeat: no-repeat;
-                transition: background-size 2s ease-in;
-                -moz-transition: background-size 2s ease-in;
-                -ms-transition: background-size 2s ease-in;
-                -o-transition: background-size 2s ease-in;
-                -webkit-transition: background-size 2s ease-in;
+                background-position: center;
+                background-size: 100%;
+                transition: background-size 1s ease-in;
+
 
                 #youtubePlayer{
                     position: absolute;
                 }
 
                 &:hover{
-                    background-size: 110%;
+                    background-size: 105%;
 
                 }
             }
