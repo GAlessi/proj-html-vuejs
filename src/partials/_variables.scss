@@ -1,0 +1,42 @@
+
+//colori testo
+$barsColorGrey: rgb(141,141,141);
+$barsColorWhite: white;
+$iconColor: rgb(0,156,255);
+$offertColor: rgb(199,14,184);
+$linksColor: #009cff;
+
+//colori background
+$bgBars: black;
+$bgMain: rgb(232,232,232);
+$BgPreFooter: rgb(236,236,236);
+
+//dimensioni
+$widthContainer: 80%;
+$jumboFontSize: 20px;
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+@mixin bars {
+    padding: 10px;
+    background-color: $mainColor;
+    color: $barsColor;
+    height: 50px;
+    width: 100%;
+}
+
+@mixin square {
+    width: 50%;
+    height: 350px;
+}
+
+@mixin BgImg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}

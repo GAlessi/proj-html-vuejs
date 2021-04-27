@@ -1,0 +1,336 @@
+.home header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  height: 100px;
+  padding-top: 10px;
+  background-color: black;
+}
+.home header ul.navTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  width: 80%;
+  justify-content: flex-end;
+}
+.home header ul.navTop li {
+  margin: 0 10px;
+}
+.home header ul.navTop li a {
+  color: #8d8d8d;
+  text-decoration: none;
+  font-size: 14px;
+}
+.home header ul.navTop li a i {
+  margin: 0 5px;
+  color: #009cff;
+}
+.home header ul.navTop li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.home header .navBottom {
+  width: 80%;
+}
+.home header .navBottom img {
+  height: 25px;
+}
+.home header .navBottom ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.home header .navBottom ul li {
+  padding: 20px;
+}
+.home header .navBottom ul li a {
+  color: white;
+}
+.home header .navBottom ul li a i {
+  color: #8d8d8d;
+  font-size: 12px;
+}
+.home header .navBottom ul li:hover {
+  background-color: white;
+}
+.home header .navBottom ul li:first-child:hover {
+  background-color: black;
+}
+.home header .navBottom ul li:hover a {
+  color: black;
+}
+.home .jumbotron {
+  width: 100%;
+  height: 450px;
+  background-image: url("img/bg-painter-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .jumbotron .jumboInfo {
+  font-size: 20px;
+  padding: 60px 0 0 10%;
+}
+.home .jumbotron .jumboInfo img {
+  width: auto;
+  height: 50px;
+}
+.home .jumbotron .jumboInfo p {
+  font-size: 20px;
+  margin: 30px 0;
+}
+.home .jumbotron .jumboInfo .offert {
+  font-size: 18px;
+}
+.home .jumbotron .jumboInfo .offert span {
+  font-weight: 600;
+  color: #c70eb8;
+}
+.home .jumbotron .jumboInfo .offert p {
+  color: #c70eb8;
+  margin: 5px 0 20px 0;
+  font-size: 18px;
+}
+.home .jumbotron .jumboInfo .offert button {
+  font-size: 22px;
+  padding: 10px;
+  margin: 5px;
+  background-color: black;
+  color: white;
+}
+.home .jumbotron .jumboInfo .offert button:last-child {
+  background-color: inherit;
+  color: black;
+}
+.home main {
+  background-color: #e8e8e8;
+  padding: 30px 0;
+}
+.home main .paintingPossibility {
+  width: 80%;
+  margin: auto;
+}
+.home main .paintingPossibility h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+  margin: 20px 0;
+}
+.home main .paintingPossibility .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+}
+.home main .paintingPossibility .row .module {
+  width: 30%;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+.home main .paintingPossibility .row .module img {
+  width: 100%;
+  height: auto;
+}
+.home main .paintingPossibility .row .module .moduleInfo {
+  padding: 20px;
+}
+.home main .paintingPossibility .row .module .moduleInfo h3 {
+  margin: 5px 0;
+}
+.home main .paintingPossibility .row .module .moduleInfo h3 span {
+  color: #009cff;
+}
+.home main .paintingPossibility .row .module .moduleInfo p {
+  margin-bottom: 20px;
+}
+.home main .paintingPossibility .row .module .moduleInfo .link {
+  color: #009cff;
+}
+.home main .paintingPossibility .row .module:hover .link {
+  text-decoration: underline;
+}
+.home main .squares {
+  width: 80%;
+  margin: 80px auto;
+}
+.home main .squares .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.home main .squares .row .squareText {
+  width: 50%;
+  height: 350px;
+  padding: 50px 50px 0 40px;
+  color: white;
+}
+.home main .squares .row .squareText h2 {
+  font-size: 28px;
+}
+.home main .squares .row .squareText p {
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+.home main .squares .row .squareText button {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 8px 15px;
+}
+.home main .squares .row .squareImg {
+  width: 50%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home main .squares .row .squareImg img {
+  width: 70%;
+  height: auto;
+}
+.home main .squares .wacom .squareText {
+  background-color: #3c1567;
+}
+.home main .squares .wacom .squareImg {
+  background-image: url("img/wacom-painter.jpg");
+}
+.home main .squares .master .squareText {
+  background-color: #3c3c3c;
+}
+.home main .squares .master .squareImg {
+  background-image: url("img/painter-master.jpg");
+}
+.home main .squares .business .squareText {
+  background-color: #0072bc;
+}
+.home main .squares .business .squareImg {
+  background-image: url("img/business-education.jpg");
+}
+.home .preFooter {
+  padding: 80px 0 20px 0;
+  background-color: #ececec;
+}
+.home .preFooter .preFooterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.home .preFooter .preFooterContainer span {
+  font-size: 15px;
+  font-weight: 400;
+}
+.home .preFooter .preFooterContainer li a {
+  color: black;
+  font-size: 12px;
+  line-height: 40px;
+}
+.home .preFooter .preFooterContainer li a:hover {
+  text-decoration: underline;
+}
+.home .preFooter .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  width: 80%;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.home .preFooter .social li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin: 0 10px 0 0;
+  width: 30px;
+  height: 30px;
+}
+.home .preFooter .social li i {
+  font-size: 18px;
+  color: white;
+}
+.home .preFooter .social #instagram {
+  background-color: #e4405f;
+}
+.home .preFooter .social #facebook {
+  background-color: #3b5998;
+}
+.home .preFooter .social #twitter {
+  background-color: #1da1f2;
+}
+.home .preFooter .social #youtube {
+  background-color: #cd201f;
+}
+.home .preFooter .social #pinterest {
+  background-color: #bd081c;
+}
+.home .preFooter .social #rss {
+  background-color: #ff8d00;
+}
+.home footer {
+  background-color: black;
+  height: 100px;
+}
+.home footer .footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+}
+.home footer .footerContainer .partners img {
+  margin: 0 15px;
+}
+.home footer .footerContainer ul {
+  list-style: none;
+  font-size: 14px;
+}
+.home footer .footerContainer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.home footer .footerContainer ul li a {
+  color: #8d8d8d;
+}
+.home footer .footerContainer ul li a:hover {
+  text-decoration: underline;
+}
+.home footer .footerContainer ul li span {
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif;
+}
+
+h1 {
+  color: red;
+}
