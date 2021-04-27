@@ -2,11 +2,55 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <title>Artist-Copy</title>
         <link rel="stylesheet" href="style.css">
         <script src="app.js" charset="utf-8"></script>
     </head>
     <body>
-        <h1>prova</h1>
+        <div id="app" class="homepage">
+            <header>
+                <div class="countdownBar">
+                    <div class="countdown">
+                        <span>Our biggest event of the year starts in:</span>
+                        <div class="clock">
+                            <span><i class="far fa-clock"></i></span>
+
+                            <span>
+                                <p>{{countdown}}</p>
+                            </span>
+                        </div>
+                        <a href="#"><span class="buttonPrimary">Get Ticket</span></a>
+                    </div>
+                </div>
+                <nav>
+
+                </nav>
+            </header>
+            <div class="jumbotron">
+                <div class="jumboText">
+                    <h2>Hello, Im Martin</h2>
+                    <h3>Artist Coaching And Mentoring Might Be for You.</h3>
+                    <a href="#"><span class="buttonPrimary">Get Started Today</span></a>
+                </div>
+                <img src="img\artist-shape-01-600x577.png" id="shape1">
+                <img src="img\artist-shape-04-127x300.png" id="shape4">
+                <img src="img\artist-shape-02-768x415.png" id="shape2">
+                <img src="img\artist-shape-05-300x198.png" id="shape5">
+                <img src="img\maxcoach-shape-12.png" id="shape12">
+
+            </div>
+
+            <div class="artistCoaching">
+                <div class="artistText">
+                    <h2>Artist coaching</h2>
+                    <h3>I understand what it takes to create. I can help you with</h3>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
