@@ -181,11 +181,31 @@
   align-items: center;
   width: 100%;
   margin: auto;
-  position: relative;
   margin: 150px auto;
 }
-.homepage .artistCoaching .youtube #youtubePlayer {
+.homepage .artistCoaching .youtube .video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  width: 950px;
+  height: 550px;
+  border-radius: 5px;
+  background-image: url("img/artist-video-poster.jpg");
+  background-repeat: no-repeat;
+  transition: background-size 2s ease-in;
+  -moz-transition: background-size 2s ease-in;
+  -ms-transition: background-size 2s ease-in;
+  -o-transition: background-size 2s ease-in;
+  -webkit-transition: background-size 2s ease-in;
+}
+.homepage .artistCoaching .youtube .video #youtubePlayer {
   position: absolute;
+}
+.homepage .artistCoaching .youtube .video:hover {
+  background-size: 110%;
 }
 
 * {

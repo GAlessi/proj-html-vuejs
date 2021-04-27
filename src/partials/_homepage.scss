@@ -147,11 +147,32 @@
 
         .youtube{
             @include flex;
-            position: relative;
             margin: 150px auto;
-            #youtubePlayer{
-                position: absolute;
+
+            .video{
+                position: relative;
+                @include flex;
+                width: 950px;
+                height: 550px;
+                border-radius: 5px;
+                background-image: url("img/artist-video-poster.jpg");
+                background-repeat: no-repeat;
+                transition: background-size 2s ease-in;
+                -moz-transition: background-size 2s ease-in;
+                -ms-transition: background-size 2s ease-in;
+                -o-transition: background-size 2s ease-in;
+                -webkit-transition: background-size 2s ease-in;
+
+                #youtubePlayer{
+                    position: absolute;
+                }
+
+                &:hover{
+                    background-size: 110%;
+
+                }
             }
+
         }
     }
 
