@@ -97,20 +97,95 @@
   z-index: 120;
   zoom: 1.5;
 }
-.homepage .artistText {
+.homepage .artistCoaching .artistText {
   width: 45%;
   text-align: center;
   margin: 50px auto;
 }
-.homepage .artistText h2 {
+.homepage .artistCoaching .artistText h2 {
   font-family: "Parisienne", cursive;
   color: #6ac5f1;
   font-size: 50px;
   font-weight: 500;
 }
-.homepage .artistText h3 {
+.homepage .artistCoaching .artistText h3 {
   font-size: 40px;
   margin: 20px 0 40px 0;
+}
+.homepage .artistCoaching .rowImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  width: 80%;
+  margin: 80px auto;
+}
+.homepage .artistCoaching .rowImg .module {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.homepage .artistCoaching .rowtext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  width: 80%;
+  margin: 80px auto;
+}
+.homepage .artistCoaching .rowtext .coachtText {
+  width: 50%;
+  text-align: center;
+  padding: 0 100px;
+}
+.homepage .artistCoaching .rowtext .coachtText h2 {
+  font-family: "Parisienne", cursive;
+  color: #6ac5f1;
+  font-size: 50px;
+  font-weight: 500;
+}
+.homepage .artistCoaching .rowtext .coachtText h3 {
+  font-size: 40px;
+  margin: 20px 0 40px 0;
+}
+.homepage .artistCoaching .rowtext .coachDescription {
+  width: 50%;
+  text-align: left;
+}
+.homepage .artistCoaching .rowtext .coachDescription p {
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+.homepage .artistCoaching .rowtext .coachDescription .buttonSecondary {
+  color: #ef6f31;
+  background-color: #fdf0ea;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.homepage .artistCoaching .rowtext .coachDescription .buttonSecondary:hover {
+  color: white;
+  background-color: #ef6f31;
+}
+.homepage .artistCoaching .youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  margin: 150px auto;
+}
+.homepage .artistCoaching .youtube #youtubePlayer {
+  position: absolute;
 }
 
 * {

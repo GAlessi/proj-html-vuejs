@@ -20,6 +20,19 @@
     }
 }
 
+@mixin buttonSecondary {
+    color: rgb(239,111,49);
+    background-color: rgb(253,240,234);
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    &:hover{
+        color: white;
+        background-color: rgb(239,111,49);
+    }
+}
+
 @mixin handWrited {
     font-family: 'Parisienne', cursive;
     color: rgb(106 197 241);
