@@ -13,7 +13,9 @@ function init() {
     data: {
       countdown: "01 : 13 : 46 : 26",
       links: ["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
-      socials: ["fa-twitter", "fa-facebook", "fa-instagram", "fa-linkedin"]
+      socials: ["fa-twitter", "fa-facebook", "fa-instagram", "fa-linkedin"],
+      explore: ["Start here", "Success story", "Blog", "Courses", "Contact us"],
+      information: ["Membership", "Purchase guide", "Privacy policy", "Terms of services"]
     },
     methods: {},
     mounted: function mounted() {// // Set the date we're counting down to

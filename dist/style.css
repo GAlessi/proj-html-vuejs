@@ -70,10 +70,10 @@
   width: auto;
 }
 .homepage header nav .social li {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .homepage header nav .social li i {
-  font-size: 20px;
+  font-size: 25px;
 }
 .homepage .jumbotron {
   height: 650px;
@@ -532,7 +532,7 @@
   width: auto;
   flex-grow: 1;
   height: 100%;
-  padding: 50px;
+  padding: 55px;
   color: dimgray;
 }
 .homepage .events .row .text .date {
@@ -552,6 +552,123 @@
 }
 .homepage .events .second .text {
   align-items: flex-end;
+  text-align: right;
+}
+.homepage .newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: #244186;
+  height: 200px;
+  color: white;
+  padding: 0 50px;
+}
+.homepage .newsletter h2 {
+  font-size: 40px;
+  font-weight: 400;
+  width: 20%;
+  text-align: right;
+}
+.homepage .newsletter .email {
+  padding: 10px 0;
+  border-bottom: 2px solid #5b71a4;
+  width: 60%;
+  position: relative;
+  font-size: 35px;
+}
+.homepage .newsletter .email input {
+  background: none;
+  border: none;
+  width: 100%;
+  font-size: 35px;
+  color: white;
+}
+.homepage .newsletter .email input::-moz-placeholder {
+  color: white;
+  opacity: 1;
+}
+.homepage .newsletter .email input:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+.homepage .newsletter .email input::placeholder {
+  color: white;
+  opacity: 1;
+}
+.homepage .newsletter .email input:focus {
+  outline: none;
+}
+.homepage .newsletter .email i {
+  position: absolute;
+  right: 0;
+}
+.homepage footer {
+  padding: 100px 20px;
+}
+.homepage footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.homepage footer .row h2 {
+  margin-bottom: 20px;
+}
+.homepage footer .row h3 {
+  margin: 25px 0;
+  font-weight: 100;
+  font-size: 16px;
+}
+.homepage footer .row .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: flex-start;
+}
+.homepage footer .row .social li {
+  margin-right: 30px;
+  color: dimgray;
+}
+.homepage footer .row .social li i {
+  font-size: 25px;
+}
+.homepage footer .row .social li:hover {
+  color: #f0773c;
+}
+.homepage footer .row .list li {
+  line-height: 50px;
+}
+.homepage footer .row .list li a {
+  color: black;
+}
+.homepage footer .row .list li a:hover {
+  color: #f0773c;
+}
+.homepage footer .row .instagram h2 {
+  display: inline-block;
+}
+.homepage footer .row .instagram span {
+  color: #ef6f31;
+}
+.homepage footer .row .instagram img {
+  width: 150px;
+  height: auto;
+  margin: 15px 15px 15px 0;
+}
+.homepage footer .rights {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 20px;
+  color: dimgray;
 }
 
 * {

@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="sectionText">
+                        <div class="coachtText">
                             <img src="img\artist-quote-icon.png">
                             <h3>I coach and mentor visual artists, like you, to Create Like You Mean It</h3>
                             <h2>Martin Garrix</h2>
@@ -325,30 +325,79 @@
 
                         <div class="image painting"></div>
                         <div class="text">
-                            <span class="date">APR 22, 2021</span>
-                            <span class="title">Storytelling Wotkshop</span>
-                            <span class="location"><i class="fas fa-map-marker-alt"></i>Texas, US</span>
+                            <span class="date">OCT 10, 2020</span>
+                            <span class="title">Painting Art Contest 2020</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i>New York, US</span>
                         </div>
                     </div>
 
                     <div class="row second">
                         <div class="text">
-                            <span class="date">APR 22, 2021</span>
-                            <span class="title">Storytelling Wotkshop</span>
-                            <span class="location"><i class="fas fa-map-marker-alt"></i>Texas, US</span>
+                            <span class="date">NOV 23, 2020</span>
+                            <span class="title">International Art Fair 2020</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i>Hamburg, Germany</span>
                         </div>
                         <div class="image international"></div>
 
                         <div class="text">
-                            <span class="date">APR 22, 2021</span>
-                            <span class="title">Storytelling Wotkshop</span>
-                            <span class="location"><i class="fas fa-map-marker-alt"></i>Texas, US</span>
+                            <span class="date">DEC 15, 2020</span>
+                            <span class="title">Street Performance: Call for Artist</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Illinois, US</span>
                         </div>
                         <div class="image street"></div>
                     </div>
                 </section>
+
+                <!-- sezione Newsletter -->
+                <section class="newsletter">
+                    <h2>Newsletter to get in touch</h2>
+                    <div class="email">
+                        <input type="email" placeholder="Your e-mail">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </section>
             </main>
 
+<!-- footer -->
+            <footer>
+                <div class="row">
+
+                    <div class="address">
+                        <h2>Address</h2>
+                        <h3>382 NE 191st St # 87394 Miami, FL 33179-3899</h3>
+                        <h3>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</h3>
+                        <h3>support@maxcoach.com</h3>
+                        <ul class="social">
+                            <li v-for="social in socials"><i class="fab" :class="social"></i></li>
+                        </ul>
+                    </div>
+                    <div class="explore list">
+                        <h2>Explore</h2>
+                        <ul>
+                            <li v-for="elem in explore"> <a href="#">{{elem}}</a> </li>
+                        </ul>
+                    </div>
+                    <div class="info list">
+                        <h2>Information</h2>
+                        <ul>
+                            <li v-for="elem in information"> <a href="#">{{elem}}</a> </li>
+                        </ul>
+                    </div>
+                    <div class="instagram">
+                        <h2>Instagram</h2>
+                        <span>@maxcoach</span>
+                        <div class="img">
+                            <img src="img\120084500_197897808368764_8114555493043279565_n.jpg">
+                            <img src="img\120012142_177596140500760_8623485824101406058_n.jpg">
+                            <img src="img\120099363_364334431619755_7198812647386067017_n.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rights">
+                    <span>© 2020 Maxcoach. All Rights Reserved</span>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
