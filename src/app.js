@@ -3,8 +3,9 @@ function init() {
         el:"#app",
 
         data:{
-            countdown:"time",
-            links:["Home", "Pages", "Courses", "Features", "Blog", "Shop"]
+            countdown:"01 : 13 : 46 : 26",
+            links:["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
+            socials:["fa-twitter", "fa-facebook", "fa-instagram", "fa-linkedin"]
         },
 
         methods:{

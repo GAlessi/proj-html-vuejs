@@ -15,6 +15,7 @@
 }
 .homepage header .countdownBar .countdown .clock span {
   display: inline-block;
+  margin: 5px;
 }
 .homepage header .countdownBar .countdown .buttonPrimary {
   color: white;
@@ -40,18 +41,39 @@
 .homepage header nav img {
   width: 200px;
 }
+.homepage header nav ul {
+  color: dimgray;
+}
+.homepage header nav ul li:hover {
+  color: #f0773c;
+}
 .homepage header nav .links {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: auto;
+  flex-grow: 1;
 }
 .homepage header nav .links li {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .homepage header nav .links li i {
   font-size: 10px;
+}
+.homepage header nav .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  width: auto;
+}
+.homepage header nav .social li {
+  margin-right: 20px;
+}
+.homepage header nav .social li i {
+  font-size: 20px;
 }
 .homepage .jumbotron {
   height: 650px;
@@ -63,21 +85,11 @@
   margin: auto;
   position: relative;
 }
-.homepage .jumbotron .jumboText {
+.homepage .jumbotron .sectionText {
   width: 45%;
   text-align: center;
 }
-.homepage .jumbotron .jumboText h2 {
-  font-family: "Parisienne", cursive;
-  color: #6ac5f1;
-  font-size: 50px;
-  font-weight: 500;
-}
-.homepage .jumbotron .jumboText h3 {
-  font-size: 40px;
-  margin: 20px 0 40px 0;
-}
-.homepage .jumbotron .jumboText .buttonPrimary {
+.homepage .jumbotron .sectionText .buttonPrimary {
   color: white;
   background-color: #ef6f31;
   padding: 8px 30px;
@@ -86,7 +98,7 @@
   font-size: 14px;
   padding: 15px 25px;
 }
-.homepage .jumbotron .jumboText .buttonPrimary:hover {
+.homepage .jumbotron .sectionText .buttonPrimary:hover {
   background-color: #6ac5f1;
 }
 .homepage .jumbotron img {
@@ -118,22 +130,7 @@
   z-index: 120;
   zoom: 1.5;
 }
-.homepage .artistCoaching .artistText {
-  width: 45%;
-  text-align: center;
-  margin: 50px auto;
-}
-.homepage .artistCoaching .artistText h2 {
-  font-family: "Parisienne", cursive;
-  color: #6ac5f1;
-  font-size: 50px;
-  font-weight: 500;
-}
-.homepage .artistCoaching .artistText h3 {
-  font-size: 40px;
-  margin: 20px 0 40px 0;
-}
-.homepage .artistCoaching .rowImg {
+.homepage .artistCoaching .row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +139,7 @@
   width: 80%;
   margin: 80px auto;
 }
-.homepage .artistCoaching .rowImg .module {
+.homepage .artistCoaching .row .module {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,42 +148,33 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.homepage .artistCoaching .rowtext {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  width: 80%;
-  margin: 80px auto;
-}
-.homepage .artistCoaching .rowtext .coachtText {
+.homepage .artistCoaching .row .coachtText {
   width: 50%;
   text-align: center;
   padding: 0 100px;
 }
-.homepage .artistCoaching .rowtext .coachtText h2 {
+.homepage .artistCoaching .row .coachtText h2 {
   font-family: "Parisienne", cursive;
   color: #6ac5f1;
   font-size: 50px;
   font-weight: 500;
 }
-.homepage .artistCoaching .rowtext .coachtText h3 {
+.homepage .artistCoaching .row .coachtText h3 {
   font-size: 40px;
   margin: 20px 0 40px 0;
   line-height: 60px;
 }
-.homepage .artistCoaching .rowtext .coachDescription {
+.homepage .artistCoaching .row .coachDescription {
   width: 50%;
   text-align: left;
   margin-top: 20px;
 }
-.homepage .artistCoaching .rowtext .coachDescription p {
+.homepage .artistCoaching .row .coachDescription p {
   margin: 20px 0;
   font-size: 18px;
   line-height: 30px;
 }
-.homepage .artistCoaching .rowtext .coachDescription .buttonSecondary {
+.homepage .artistCoaching .row .coachDescription .buttonSecondary {
   color: #ef6f31;
   background-color: #fdf0ea;
   padding: 15px 25px;
@@ -196,7 +184,7 @@
   display: inline-block;
   margin-top: 30px;
 }
-.homepage .artistCoaching .rowtext .coachDescription .buttonSecondary:hover {
+.homepage .artistCoaching .row .coachDescription .buttonSecondary:hover {
   color: white;
   background-color: #ef6f31;
 }
@@ -222,13 +210,174 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  transition: background-size 1s ease-in;
+  transition: background-size 0.5s ease-in;
 }
 .homepage .artistCoaching .youtube .video #youtubePlayer {
   position: absolute;
 }
 .homepage .artistCoaching .youtube .video:hover {
   background-size: 105%;
+}
+.homepage .testimonials {
+  background-color: #faf8f6;
+  padding: 50px 0;
+}
+.homepage .testimonials .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  height: 535px;
+  padding: 0 10%;
+}
+.homepage .testimonials .row .module {
+  width: 33%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 50px;
+  background-color: white;
+  margin: 0 30px;
+}
+.homepage .testimonials .row .module h2 {
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.homepage .testimonials .row .module p {
+  font-size: 20px;
+  line-height: 40px;
+}
+.homepage .testimonials .row .testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+.homepage .testimonials .row .testimonial img {
+  width: 30%;
+  border-radius: 100%;
+  margin-right: 30px;
+}
+.homepage .testimonials .row .testimonial .title {
+  flex-grow: 1;
+}
+.homepage .testimonials .row .testimonial .title span {
+  display: inline-block;
+  margin: 20px 0;
+  color: dimgray;
+}
+.homepage .testimonials .dots {
+  text-align: center;
+  margin: 50px 0;
+}
+.homepage .testimonials .dots i {
+  margin: 0 20px;
+}
+.homepage .courses .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.homepage .courses .row .module {
+  width: 300px;
+}
+.homepage .courses .row .module .image {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 0.5s ease-in;
+}
+.homepage .courses .row .module .image:hover {
+  background-size: 105%;
+}
+.homepage .courses .row .module .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+}
+.homepage .courses .row .module .text .price {
+  color: #ef6f31;
+  font-size: 24px;
+  font-weight: bold;
+}
+.homepage .courses .row .module .text h2 {
+  margin: 20px 0;
+}
+.homepage .courses .row .module .text .lessons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.homepage .courses .row .module .text .lessons span {
+  margin: 5px 0;
+}
+.homepage .courses .row .module .acrylic {
+  background-image: url("img/artist-course-08-480x480.jpg");
+}
+.homepage .courses .row .module .shadow {
+  background-image: url("img/artist-course-07-480x480.jpg");
+}
+.homepage .courses .row .module .digital {
+  background-image: url("img/artist-course-06-480x480.jpg");
+}
+.homepage .courses .row .module .sketch {
+  background-image: url("img/artist-course-05-480x480.jpg");
+}
+.homepage .courses .row .module .portrait {
+  background-image: url("img/artist-course-04-480x480.jpg");
+}
+.homepage .courses .row .module .painting {
+  background-image: url("img/artist-course-03-480x480.jpg");
+}
+.homepage .courses .row .module .drawing {
+  background-image: url("img/artist-course-02-480x480.jpg");
+}
+.homepage .courses .row .module .colored {
+  background-image: url("img/artist-course-01-480x480.jpg");
+}
+.homepage .courses .btncontainer {
+  text-align: center;
+}
+.homepage .courses .btncontainer .buttonSecondary {
+  color: #ef6f31;
+  background-color: #fdf0ea;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  margin: 30px auto;
+}
+.homepage .courses .btncontainer .buttonSecondary:hover {
+  color: white;
+  background-color: #ef6f31;
+}
+.homepage .courses .btncontainer .buttonSecondary i {
+  margin-left: 5px;
+}
+.homepage .tips {
+  background-color: #f5f7fa;
+  padding: 50px;
 }
 
 * {
@@ -244,4 +393,20 @@ a {
 
 ul {
   list-style: none;
+}
+
+.sectionText {
+  width: 45%;
+  text-align: center;
+  margin: 50px auto;
+}
+.sectionText h2 {
+  font-family: "Parisienne", cursive;
+  color: #6ac5f1;
+  font-size: 50px;
+  font-weight: 500;
+}
+.sectionText h3 {
+  font-size: 40px;
+  margin: 20px 0 40px 0;
 }

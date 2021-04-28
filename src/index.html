@@ -34,15 +34,15 @@
                     <ul class="links">
                         <li v-for="link in links">{{link}} <i class="fas fa-chevron-down"></i></li>
                     </ul>
-                    <ul>
-                        <li></li>
+                    <ul class="social">
+                        <li v-for="social in socials"><i class="fab" :class="social"></i></li>
                     </ul>
                 </nav>
             </header>
 
 <!-- Jumbotron -->
             <div class="jumbotron">
-                <div class="jumboText">
+                <div class="sectionText">
                     <h2>Hello, Im Martin</h2>
                     <h3>Artist Coaching And Mentoring Might Be for You.</h3>
                     <a href="#"><span class="buttonPrimary">Get Started Today</span></a>
@@ -59,12 +59,12 @@
             <main>
 
                 <!-- sezione coaching -->
-                <div class="artistCoaching">
-                    <div class="artistText">
+                <section class="artistCoaching">
+                    <div class="sectionText">
                         <h2>Artist coaching</h2>
                         <h3>I understand what it takes to create. I can help you with</h3>
                     </div>
-                    <div class="rowImg">
+                    <div class="row">
                         <div class="module">
                             <img src="img\artist-box-image-01.png" alt="">
                             <h3>rrrrr</h3>
@@ -87,8 +87,8 @@
                         </div>
                     </div>
 
-                    <div class="rowtext">
-                        <div class="coachtText">
+                    <div class="row">
+                        <div class="sectionText">
                             <img src="img\artist-quote-icon.png">
                             <h3>I coach and mentor visual artists, like you, to Create Like You Mean It</h3>
                             <h2>Martin Garrix</h2>
@@ -105,7 +105,168 @@
                             <img id="youtubePlayer" src="img\icon-youtube-play.png">
                         </div>
                     </div>
-                </div>
+                </section>
+
+                <!-- testimonials -->
+                <section class="testimonials">
+                    <div class="sectionText">
+                        <h2>Testimonials</h2>
+                        <h3>Why do people love me?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="module">
+                            <h2>High level of efficiency and scientific teaching methods</h2>
+                            <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
+                            <div class="testimonial">
+                                <img src="img/artist-testimonial-avatar-04.jpg">
+                                <div class="title">
+                                    <h4>Mina Hollance</h4>
+                                    <span>/ Freelancer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <h2>High level of efficiency and scientific teaching methods</h2>
+                            <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
+                            <div class="testimonial">
+                                <img src="img/artist-testimonial-avatar-04.jpg">
+                                <div class="title">
+                                    <h4>Mina Hollance</h4>
+                                    <span>/ Freelancer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <h2>High level of efficiency and scientific teaching methods</h2>
+                            <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
+                            <div class="testimonial">
+                                <img src="img/artist-testimonial-avatar-04.jpg">
+                                <div class="title">
+                                    <h4>Mina Hollance</h4>
+                                    <span>/ Freelancer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dots">
+                        <i v-for="i in 4" class="fas fa-circle"></i>
+                    </div>
+                </section>
+                <section class="courses">
+                    <div class="coursesText">
+                        <h2>Artist coaching</h2>
+                        <h3>Latest Online Courses</h3>
+                    </div>
+                    <div class="row">
+                        <div class="module">
+                            <div class="image acrylic"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <div class="image shadow"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <div class="image digital"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <div class="image sketch"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="module">
+                            <div class="image portrait"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <div class="image painting"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <div class="image drawing"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module">
+                            <div class="image colored"></div>
+                            <div class="text">
+                                <span class="price">$18.00</span>
+                                <h2>The Acrylic Painting Academy</h2>
+                                <div class="lessons">
+                                    <span><i class="far fa-file-alt"></i> 4 Lessons</span>
+                                    <span><i class="far fa-user"></i> 50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btncontainer">
+                        <a href="#"><span class="buttonSecondary">View all courses<i class="fas fa-arrow-right"></i></span></a>
+                    </div>
+
+                </section>
+
+                <section class="tips">
+                    <div class="sectionText">
+                        <h2>Articles and Tips</h2>
+                        <h3>Latest From The Blog</h3>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </section>
             </main>
 
         </div>

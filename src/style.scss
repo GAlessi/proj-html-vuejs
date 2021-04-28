@@ -15,3 +15,16 @@ a{
 ul{
     list-style: none;
 }
+
+.sectionText{
+    width: 45%;
+    text-align: center;
+    margin: 50px auto;
+    h2{
+        @include handWrited;
+    }
+    h3{
+        font-size: 40px;
+        margin: 20px 0 40px 0;
+    }
+}
