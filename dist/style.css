@@ -130,13 +130,15 @@
   z-index: 120;
   zoom: 1.5;
 }
+.homepage .artistCoaching {
+  padding: 50px;
+}
 .homepage .artistCoaching .row {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: auto;
-  width: 80%;
   margin: 80px auto;
 }
 .homepage .artistCoaching .row .module {
@@ -212,11 +214,11 @@
   background-size: 100%;
   transition: background-size 0.5s ease-in;
 }
+.homepage .artistCoaching .youtube .video:hover {
+  background-size: 110%;
+}
 .homepage .artistCoaching .youtube .video #youtubePlayer {
   position: absolute;
-}
-.homepage .artistCoaching .youtube .video:hover {
-  background-size: 105%;
 }
 .homepage .testimonials {
   background-color: #faf8f6;
@@ -228,7 +230,7 @@
   align-items: center;
   width: 100%;
   margin: auto;
-  height: 535px;
+  height: 550px;
   padding: 0 10%;
 }
 .homepage .testimonials .row .module {
@@ -276,6 +278,9 @@
 .homepage .testimonials .dots i {
   margin: 0 20px;
 }
+.homepage .courses {
+  padding: 50px;
+}
 .homepage .courses .row {
   display: flex;
   justify-content: center;
@@ -283,7 +288,6 @@
   width: 100%;
   margin: auto;
   justify-content: space-between;
-  padding: 0 50px;
 }
 .homepage .courses .row .module {
   width: 300px;
@@ -297,7 +301,7 @@
   transition: background-size 0.5s ease-in;
 }
 .homepage .courses .row .module .image:hover {
-  background-size: 105%;
+  background-size: 110%;
 }
 .homepage .courses .row .module .text {
   display: flex;
@@ -396,7 +400,7 @@
   transition: background-size 0.5s ease-in;
 }
 .homepage .tips .row .sideModule .image:hover {
-  background-size: 105%;
+  background-size: 110%;
 }
 .homepage .tips .row .sideModule .text {
   background-color: white;
@@ -481,6 +485,73 @@
 }
 .homepage .tips .details .posts i {
   margin-left: 5px;
+}
+.homepage .events {
+  padding: 50px;
+}
+.homepage .events .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  height: 350px;
+  margin-top: 80px;
+}
+.homepage .events .row .image {
+  height: 100%;
+  width: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 0.5s ease-in;
+}
+.homepage .events .row .image:hover {
+  background-size: 110%;
+}
+.homepage .events .row .story {
+  background-image: url("img/artist-event-04-250x300.jpg");
+}
+.homepage .events .row .painting {
+  background-image: url("img/artist-event-03-250x300.jpg");
+}
+.homepage .events .row .international {
+  background-image: url("img/artist-event-02-250x300.jpg");
+}
+.homepage .events .row .street {
+  background-image: url("img/artist-event-01-250x300.jpg");
+}
+.homepage .events .row .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  flex-grow: 1;
+  height: 100%;
+  padding: 50px;
+  color: dimgray;
+}
+.homepage .events .row .text .date {
+  font-size: 20px;
+  font-weight: 500;
+}
+.homepage .events .row .text .title {
+  color: black;
+  font-size: 24px;
+  margin: 20px 0 30px;
+}
+.homepage .events .row .text .location {
+  font-size: 18px;
+}
+.homepage .events .row .text .location i {
+  margin-right: 10px;
+}
+.homepage .events .second .text {
+  align-items: flex-end;
 }
 
 * {
