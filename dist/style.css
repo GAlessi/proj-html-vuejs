@@ -379,6 +379,109 @@
   background-color: #f5f7fa;
   padding: 50px;
 }
+.homepage .tips .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+}
+.homepage .tips .row .sideModule .image {
+  width: 100%;
+  height: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 0.5s ease-in;
+}
+.homepage .tips .row .sideModule .image:hover {
+  background-size: 105%;
+}
+.homepage .tips .row .sideModule .text {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350px;
+  height: 220px;
+  padding: 20px;
+}
+.homepage .tips .row .sideModule .text .artist {
+  color: dimgray;
+  font-size: 20px;
+}
+.homepage .tips .row .sideModule .text h2 {
+  margin: 20px 0;
+}
+.homepage .tips .row .sideModule .text .lessons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  color: dimgray;
+}
+.homepage .tips .row .sideModule .text .lessons span i {
+  margin-right: 10px;
+}
+.homepage .tips .row .sideModule .brush {
+  background-image: url("img/120084500_197897808368764_8114555493043279565_n.jpg");
+}
+.homepage .tips .row .sideModule .miniature {
+  background-image: url("img/artist-blog-01-480x356.jpg");
+}
+.homepage .tips .row .sideModule:first-child {
+  margin-top: 120px;
+}
+.homepage .tips .row .sideModule:last-child {
+  margin-bottom: 120px;
+}
+.homepage .tips .row .middleModule {
+  width: 500px;
+  height: 680px;
+  background-image: url("img/artist-blog-02-500x680.jpg");
+  padding: 450px 50px 0 50px;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 0.5s ease-in;
+}
+.homepage .tips .row .middleModule:hover {
+  background-size: 110%;
+}
+.homepage .tips .row .middleModule .artist {
+  font-size: 20px;
+}
+.homepage .tips .row .middleModule h2 {
+  margin: 20px 0;
+  font-size: 34px;
+  line-height: 40px;
+}
+.homepage .tips .row .middleModule i {
+  margin-right: 10px;
+}
+.homepage .tips .details {
+  margin-top: 50px;
+  text-align: center;
+}
+.homepage .tips .details span {
+  font-size: 20px;
+  color: dimgray;
+}
+.homepage .tips .details .posts {
+  color: #ef6f31;
+  border-bottom: 1px solid #e0e0e0;
+}
+.homepage .tips .details .posts i {
+  margin-left: 5px;
+}
 
 * {
   margin: 0;
