@@ -35,9 +35,23 @@
                     </div>
                 </div>
                 <nav>
-                    <img src="img\dark-logo.png">
+                    <img src="img\dark-logo.png" id="logo">
                     <ul class="links">
-                        <li v-for="link in links">{{link}} <i class="fas fa-chevron-down"></i></li>
+                        <li v-for="(link, ind) in links">{{link.nome}}
+                            <i class="fas fa-chevron-down"></i>
+                            <div class="dropdown" :class="ind == 0 ? 'first' : ''">
+
+                                <ul>
+                                    <li v-for="elem in link.drop">{{elem}}</li>
+                                </ul>
+                                <ul v-if="ind==0">
+                                    <li v-for="elem in link.drop2">{{elem}}</li>
+                                </ul>
+                                <div v-if="ind==0" class="image">
+                                    <img src="img\homepages-mega-menu-image-alt.jpg">
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="social">
                         <li v-for="social in socials"><i class="fab" :class="social"></i></li>

@@ -33,7 +33,7 @@
             justify-content:space-around;
             background-color: white;
 
-            img{
+            #logo{
                 width: 200px;
             }
 
@@ -47,10 +47,44 @@
                 @include flex;
                 flex-grow: 1;
                 li{
-                    margin-right: 30px;
-
+                    height: 80px;
+                    position: relative;
+                    @include flex;
+                    margin: 0;
+                    padding: 0 20px;
                     i{
                         font-size: 10px;
+                        margin-left: 5px;
+                    }
+
+                    .dropdown{
+                        display: none;
+                        position: absolute;
+                        z-index: 999;
+                        top: 80px;
+                        background: white;
+                        padding: 0 50px;
+                        border-bottom: 2px solid orange;
+                        ul{
+                            display: block;
+                            margin: 0 50px;
+                            li{
+                                justify-content: flex-start;
+                                width: 200px;
+                                height: auto;
+                                margin: 20px 0;
+                            }
+                        }
+                        .image{
+                            margin-left: 100px;
+                        }
+                    }
+                    .first{
+                        left: -420px;
+                    }
+
+                    &:hover .dropdown{
+                        display: flex;
                     }
                 }
             }
@@ -68,6 +102,7 @@
             }
         }
         .fixed{
+            width: 100%;
             position: fixed;
             top: 0;
             left: 0;
@@ -311,6 +346,7 @@
                         @include flex;
                         flex-direction: column;
                         align-items: flex-start;
+                        width: 100%;
 
                         span{
                             margin: 5px 0;
@@ -647,11 +683,11 @@
             z-index: 900;
             bottom: 130px;
             right: 50px;
-            transition: bottom 0.2s ease-in;
+            transition: bottom 0.1s ease-in;
 
 
             &:hover{
-                bottom: 155px;
+                bottom: 135px;
             }
         }
         .sideMenu{

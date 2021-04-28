@@ -7,7 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   width: 40%;
   height: 100%;
@@ -34,12 +33,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   justify-content: space-around;
   background-color: white;
 }
-.homepage header nav img {
+.homepage header nav #logo {
   width: 200px;
 }
 .homepage header nav ul {
@@ -52,21 +50,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   flex-grow: 1;
 }
 .homepage header nav .links li {
-  margin-right: 30px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin: 0;
+  padding: 0 20px;
 }
 .homepage header nav .links li i {
   font-size: 10px;
+  margin-left: 5px;
+}
+.homepage header nav .links li .dropdown {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 80px;
+  background: white;
+  padding: 0 50px;
+  border-bottom: 2px solid orange;
+}
+.homepage header nav .links li .dropdown ul {
+  display: block;
+  margin: 0 50px;
+}
+.homepage header nav .links li .dropdown ul li {
+  justify-content: flex-start;
+  width: 200px;
+  height: auto;
+  margin: 20px 0;
+}
+.homepage header nav .links li .dropdown .image {
+  margin-left: 100px;
+}
+.homepage header nav .links li .first {
+  left: -420px;
+}
+.homepage header nav .links li:hover .dropdown {
+  display: flex;
 }
 .homepage header nav .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   width: auto;
 }
@@ -77,6 +109,7 @@
   font-size: 25px;
 }
 .homepage header .fixed {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -109,7 +142,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   position: relative;
 }
@@ -165,7 +197,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   margin: 80px auto;
 }
@@ -173,7 +204,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   flex-direction: column;
   align-items: flex-start;
@@ -235,7 +265,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   margin: 150px auto;
 }
@@ -244,7 +273,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   width: 950px;
   height: 550px;
@@ -269,7 +297,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   height: 550px;
   padding: 0 10%;
@@ -295,7 +322,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   margin-top: 30px;
 }
@@ -326,7 +352,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   justify-content: space-between;
 }
@@ -348,7 +373,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   flex-direction: column;
   align-items: flex-start;
@@ -368,10 +392,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 .homepage .courses .row .module .text .lessons span {
   margin: 5px 0;
@@ -428,7 +452,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   justify-content: space-between;
 }
@@ -448,7 +471,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   flex-direction: column;
   align-items: flex-start;
@@ -467,7 +489,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   justify-content: space-between;
   color: dimgray;
@@ -534,7 +555,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   height: 350px;
   margin-top: 80px;
@@ -566,7 +586,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   flex-direction: column;
   align-items: flex-start;
@@ -599,7 +618,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   justify-content: space-around;
   margin-top: 50px;
@@ -654,7 +672,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   justify-content: space-between;
   align-items: flex-start;
@@ -671,7 +688,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   justify-content: flex-start;
 }
@@ -722,16 +738,15 @@
   z-index: 900;
   bottom: 130px;
   right: 50px;
-  transition: bottom 0.2s ease-in;
+  transition: bottom 0.1s ease-in;
 }
 .homepage .fixed .purchase:hover {
-  bottom: 155px;
+  bottom: 135px;
 }
 .homepage .fixed .sideMenu {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: auto;
   width: auto;
   flex-direction: column;
