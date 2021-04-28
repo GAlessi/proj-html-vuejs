@@ -1,9 +1,9 @@
-function init() {
+function initVue() {
     new Vue({
         el:"#app",
 
         data:{
-            countdown:"01 : 13 : 46 : 26",
+            countdown:"",
             links:["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
             socials:["fa-twitter", "fa-facebook", "fa-instagram", "fa-linkedin"],
             explore:["Start here","Success story","Blog","Courses","Contact us"],
@@ -15,28 +15,28 @@ function init() {
 
         },
         mounted:function () {
-            // Set the date we're counting down to
+            // imposta la data di fine countdown
             var countDownDate = new Date("Apr 30, 2021 18:00:00").getTime();
 
-            // Update the count down every 1 second
-            var x = setInterval(function() {
-              // Get today's date and time
+            // aggiorna il timer ogni secondo
+            var x = setInterval(()=> {
+
+              // prende la data attuale
               var now = new Date().getTime();
 
-              // Find the distance between now and the count down date
+              // calcola il tempo mancante
               var distance = countDownDate - now;
 
-              // Time calculations for days, hours, minutes and seconds
+              // converte i valori
               var days = Math.floor(distance / (1000 * 60 * 60 * 24));
               var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
               var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
               var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-              // Output the result in an element with id="demo"
+              // aggiorna il valore del data
               this.countdown = days + ": " + hours + ": " + minutes + ": " + seconds;
-              // console.log(this.countdown);
 
-              // If the count down is over, write some text
+              // stampa "expired" in caoìso il countdown sia finito
               if (distance < 0) {
                 clearInterval(x);
                 this.countdown = "EXPIRED";
@@ -44,6 +44,21 @@ function init() {
             }, 1000);
         }
     });
+
+}
+function scroll() {
+    $(document).bind('scroll', function () {
+    if ($(document).scrollTop() > 130) {
+        $('nav').addClass('fixed');
+    } else {
+        $('nav').removeClass('fixed');
+    }
+});
 }
 
-document.addEventListener("DOMContentLoaded", init);
+function init() {
+    initVue();
+    scroll();
+}
+
+$(init);
