@@ -11,9 +11,9 @@
 
             .countdown{
                 @include flex;
-                width: 40%;
+                width: 50%;
                 height: 100%;
-                justify-content: space-between;
+                justify-content: space-around;
 
                 .clock{
                     span{
@@ -344,7 +344,7 @@
 
         .row{
             width: 100%;
-            height: 550px;
+            height: 600px;
             padding: 0 10%;
             position: relative;
 
