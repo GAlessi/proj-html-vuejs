@@ -244,20 +244,7 @@
             right: 0;
             width: 20%;
         }
-        .shape05{
-            position: absolute;
-            z-index: -1;
-            bottom: 650px;
-            left: 100px;
-            width: 20%;
-        }
-        .shape12{
-            position: absolute;
-            z-index: -1;
-            bottom: 50px;
-            right: 100px;
-            width: 20%;
-        }
+
         .row{
             @include flex;
             margin: 80px auto;
@@ -316,6 +303,7 @@
         .youtube{
             @include flex;
             margin: 150px auto;
+            position: relative;
 
             .video{
                 position: relative;
@@ -326,12 +314,24 @@
                 background-image: url("img/artist-video-poster.jpg");
                 @include image;
 
-
-
                 #youtubePlayer{
                     position: absolute;
                 }
 
+            }
+            .shape05{
+                position: absolute;
+                z-index: -1;
+                bottom: 400px;
+                left: 100px;
+                width: 20%;
+            }
+            .shape12{
+                position: absolute;
+                z-index: -1;
+                bottom: -50px;
+                right: 100px;
+                width: 20%;
             }
 
         }
@@ -426,6 +426,12 @@
                 margin: 0 20px;
                 font-size: 12px;
                 color: $colorLinks;
+
+                &:hover{
+                    font-size: 15px;
+                    color: black;
+                    cursor: pointer;
+                }
             }
             .active{
                 font-size: 15px;
@@ -786,6 +792,13 @@
                 font-weight: 100;
                 font-size: 16px;
             }
+            a{
+                color: black;
+
+                &:hover{
+                    color: $colorActiveLinks;
+                }
+            }
             .social{
                 @include flex;
                 justify-content: flex-start;
@@ -796,7 +809,8 @@
                         font-size: 25px;
                     }
                     &:hover{
-                        color: $colorActiveLinks
+                        color: $colorActiveLinks;
+                        cursor:pointer;
                     }
                 }
             }

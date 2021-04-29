@@ -243,10 +243,10 @@ function follow() {
         let positionX = event.pageX;
         let positionY = event.pageY;
 
-        $('.shape05').get(0).style.setProperty("bottom", 650 +(-positionY/15)+"px");
+        $('.shape05').get(0).style.setProperty("bottom", 550 +(-positionY/15)+"px");
         $('.shape05').get(0).style.setProperty("left", 100 +(-positionX/15)+"px");
 
-        $('.shape12').get(0).style.setProperty("bottom", 50 +(positionY/15)+"px");
+        $('.shape12').get(0).style.setProperty("bottom", -250 +(positionY/15)+"px");
         $('.shape12').get(0).style.setProperty("right", 100 +(positionX/15)+"px");
     });
 }

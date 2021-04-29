@@ -170,9 +170,9 @@ function follow() {
   $('.youtube').mousemove(function (event) {
     var positionX = event.pageX;
     var positionY = event.pageY;
-    $('.shape05').get(0).style.setProperty("bottom", 650 + -positionY / 15 + "px");
+    $('.shape05').get(0).style.setProperty("bottom", 550 + -positionY / 15 + "px");
     $('.shape05').get(0).style.setProperty("left", 100 + -positionX / 15 + "px");
-    $('.shape12').get(0).style.setProperty("bottom", 50 + positionY / 15 + "px");
+    $('.shape12').get(0).style.setProperty("bottom", -250 + positionY / 15 + "px");
     $('.shape12').get(0).style.setProperty("right", 100 + positionX / 15 + "px");
   });
 } //in caso di scrollUp mostra un pulsante per tornare in cima alla homepage

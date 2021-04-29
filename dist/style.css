@@ -262,20 +262,6 @@
   right: 0;
   width: 20%;
 }
-.homepage .artistCoaching .shape05 {
-  position: absolute;
-  z-index: -1;
-  bottom: 650px;
-  left: 100px;
-  width: 20%;
-}
-.homepage .artistCoaching .shape12 {
-  position: absolute;
-  z-index: -1;
-  bottom: 50px;
-  right: 100px;
-  width: 20%;
-}
 .homepage .artistCoaching .row {
   display: flex;
   justify-content: center;
@@ -350,6 +336,7 @@
   align-items: center;
   margin: auto;
   margin: 150px auto;
+  position: relative;
 }
 .homepage .artistCoaching .youtube .video {
   position: relative;
@@ -371,6 +358,20 @@
 }
 .homepage .artistCoaching .youtube .video #youtubePlayer {
   position: absolute;
+}
+.homepage .artistCoaching .youtube .shape05 {
+  position: absolute;
+  z-index: -1;
+  bottom: 400px;
+  left: 100px;
+  width: 20%;
+}
+.homepage .artistCoaching .youtube .shape12 {
+  position: absolute;
+  z-index: -1;
+  bottom: -50px;
+  right: 100px;
+  width: 20%;
 }
 .homepage .testimonials {
   background-color: #faf8f6;
@@ -457,6 +458,11 @@
   margin: 0 20px;
   font-size: 12px;
   color: dimgray;
+}
+.homepage .testimonials .dots i:hover {
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
 }
 .homepage .testimonials .dots .active {
   font-size: 15px;
@@ -841,6 +847,12 @@
   font-weight: 100;
   font-size: 16px;
 }
+.homepage footer .row a {
+  color: black;
+}
+.homepage footer .row a:hover {
+  color: #f0773c;
+}
 .homepage footer .row .social {
   display: flex;
   justify-content: center;
@@ -857,6 +869,7 @@
 }
 .homepage footer .row .social li:hover {
   color: #f0773c;
+  cursor: pointer;
 }
 .homepage footer .row .list li {
   line-height: 50px;
