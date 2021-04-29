@@ -34,27 +34,31 @@
                         <a href="#"><span class="buttonPrimary">Get Ticket</span></a>
                     </div>
                 </div>
+
+                <!-- nav -->
                 <nav>
                     <img src="img\dark-logo.png" id="logo">
                     <ul class="links">
                         <li v-for="(link, ind) in links">{{link.nome}}
                             <i class="fas fa-chevron-down"></i>
-                            <div class="dropdown" :class="ind == 0 ? 'first' : ''">
+                            <div class="dropdown">
 
                                 <ul>
-                                    <li v-for="elem in link.drop">{{elem}}</li>
+                                    <li v-for="elem in link.drop"> {{elem}} </li>
                                 </ul>
-                                <ul v-if="ind==0">
-                                    <li v-for="elem in link.drop2">{{elem}}</li>
-                                </ul>
-                                <div v-if="ind==0" class="image">
-                                    <img src="img\homepages-mega-menu-image-alt.jpg">
+
+                                <div v-if="link.image" class="image">
+                                    <img :src="link.image">
                                 </div>
                             </div>
                         </li>
                     </ul>
                     <ul class="social">
-                        <li v-for="social in socials"><i class="fab" :class="social"></i></li>
+                        <li v-for="social in socials">
+                            <i class="fab" :class="social.icon"></i>
+
+                            <span class="name">{{social.name}}</span>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -133,7 +137,20 @@
                         <h3>Why do people love me?</h3>
                     </div>
                     <div class="row">
-                        <div class="module">
+                        <div class="overlay left"></div>
+                        <div class="overlay right"></div>
+                        <div class="module" :class="module1">
+                            <h2>It's a choice of quality for people with special needs</h2>
+                            <p>I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.</p>
+                            <div class="testimonial">
+                                <img src="img/artist-testimonial-avatar-02.jpg">
+                                <div class="title">
+                                    <h4>Florence Themes</h4>
+                                    <span>/ Multimedia Admin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module" :class="module2">
                             <h2>High level of efficiency and scientific teaching methods</h2>
                             <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
                             <div class="testimonial">
@@ -144,32 +161,35 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="module">
-                            <h2>High level of efficiency and scientific teaching methods</h2>
-                            <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
+                        <div class="module" :class="module3">
+                            <h2>Professional team of specialists and passionate mentors at reach</h2>
+                            <p>I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students</p>
                             <div class="testimonial">
-                                <img src="img/artist-testimonial-avatar-04.jpg">
+                                <img src="img/artist-testimonial-avatar-01.jpg">
                                 <div class="title">
-                                    <h4>Mina Hollance</h4>
-                                    <span>/ Freelancer</span>
+                                    <h4>Madley Pondor</h4>
+                                    <span>/ iT Specialist</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="module">
-                            <h2>High level of efficiency and scientific teaching methods</h2>
-                            <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
+                        <div class="module" :class="module4">
+                            <h2>The MaxCoach team works really hard to ensure high quality</h2>
+                            <p>I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels</p>
                             <div class="testimonial">
-                                <img src="img/artist-testimonial-avatar-04.jpg">
+                                <img src="img/artist-testimonial-avatar-03.jpg">
                                 <div class="title">
-                                    <h4>Mina Hollance</h4>
-                                    <span>/ Freelancer</span>
+                                    <h4>Luvic Dubble</h4>
+                                    <span>/ Private Tutor</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="dots">
-                        <i v-for="i in 4" class="fas fa-circle"></i>
+                        <i class="fas fa-circle" :class="dot1" @click="carousel(0)"></i>
+                        <i class="fas fa-circle" :class="dot2" @click="carousel(1)"></i>
+                        <i class="fas fa-circle" :class="dot3" @click="carousel(2)"></i>
+                        <i class="fas fa-circle" :class="dot4" @click="carousel(3)"></i>
                     </div>
                 </section>
 

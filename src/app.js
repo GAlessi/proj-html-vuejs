@@ -3,9 +3,18 @@ function initVue() {
         el:"#app",
 
         data:{
+            module1:"position1",
+            module2:"position2",
+            module3:"position3",
+            module4:"hide",
+            dot1:"active",
+            dot2:"",
+            dot3:"",
+            dot4:"",
             countdown:"",
             links:[
-                {nome:"Home",
+                {
+                    nome:"Home",
                     drop:[
                         "MaxCoach Education",
                         "Course Portal",
@@ -15,9 +24,7 @@ function initVue() {
                         "Remote Training",
                         "Health Coaching",
                         "Gym Coaching",
-                        "Business"
-                    ],
-                    drop2:[
+                        "Business",
                         "Artist",
                         "Kitchen Coach",
                         "Motivation",
@@ -26,9 +33,11 @@ function initVue() {
                         "Yoga",
                         "Photography",
                         "Personal Finance",
-                    ]
+                    ],
+                    image: "img/homepages-mega-menu-image-alt.jpg"
                 },
-                {nome:"Pages",
+                {
+                    nome:"Pages",
                     drop:[
                         "Start Here",
                         "Success Story",
@@ -42,9 +51,11 @@ function initVue() {
                         "Purchase Guide",
                         "Privacy Policy",
                         "Terms of Service"
-                    ]
+                    ],
+                    image: false
                 },
-                {nome:"Courses",
+                {
+                    nome:"Courses",
                     drop:[
                         "Courses Grid 01",
                         "Courses Grid 02",
@@ -54,34 +65,58 @@ function initVue() {
                         "Profile",
                         "Checkout",
                         "Single Layout"
-                    ]
+                    ],
+                    image: false
                 },
-                {nome:"Features",
+                {
+                    nome:"Features",
                     drop:[
                         "Events",
                         "Zoom Meetings"
-                    ]
+                    ],
+                    image: false
                 },
-                {nome:"Blog",
+                {
+                    nome:"Blog",
                     drop:[
                         "Blog Grid",
                         "Blog Masonry",
                         "Blog Classic",
                         "Blog List"
-                    ]
+                    ],
+                    image: false
                 },
-                {nome:"Shop",
+                {
+                    nome:"Shop",
                     drop:[
                         "Shop Left Sidebar",
                         "Shop Right Sidebar",
                         "Cart",
                         "Wishlist",
                         "Single Product"
-                    ]
+                    ],
+                    image: false
                 }
 
             ],
-            socials:["fa-twitter", "fa-facebook", "fa-instagram", "fa-linkedin"],
+            socials:[
+                {
+                    icon:"fa-twitter",
+                    name:"twitter"
+                 },
+                 {
+                    icon:"fa-facebook",
+                    name:"facebook"
+                },
+                {
+                    icon:"fa-instagram",
+                    name:"instagram"
+                },
+                {
+                    icon:"fa-linkedin",
+                    name:"linkedin"
+                }
+            ],
             explore:["Start here","Success story","Blog","Courses","Contact us"],
             information:["Membership","Purchase guide","Privacy policy","Terms of services"]
 
@@ -89,25 +124,74 @@ function initVue() {
 
         methods:{
 
+            carousel: function (ind) {
+                if (ind == 0) {
+                    this.module1 = "position1";
+                    this.module2 = "position2";
+                    this.module3 = "position3";
+                    this.module4 = "hide";
+                    this.dot1 = "active";
+                    this.dot2 = "";
+                    this.dot3 = "";
+                    this.dot4 = "";
+                }else if (ind == 1) {
+                    this.module1 = "hide";
+                    this.module2 = "position1";
+                    this.module3 = "position2";
+                    this.module4 = "position3";
+                    this.dot1 = "";
+                    this.dot2 = "active";
+                    this.dot3 = "";
+                    this.dot4 = "";
+                }else if (ind == 2) {
+                    this.module1 = "position3";
+                    this.module2 = "hide";
+                    this.module3 = "position1";
+                    this.module4 = "position2";
+                    this.dot1 = "";
+                    this.dot2 = "";
+                    this.dot3 = "active";
+                    this.dot4 = "";
+                }else if (ind == 3) {
+                    this.module1 = "position2";
+                    this.module2 = "position3";
+                    this.module3 = "hide";
+                    this.module4 = "position1";
+                    this.dot1 = "";
+                    this.dot2 = "";
+                    this.dot3 = "";
+                    this.dot4 = "active";
+                }
+            },
+
+            //se il numero è minore di 10 aggiunge uno 0
+            addZero: function (num) {
+                if (num < 10) {
+                    return "0" + num;
+                }else {
+                    return num;
+                }
+            }
         },
         mounted:function () {
             // imposta la data di fine countdown
-            var countDownDate = new Date("Apr 30, 2021 18:00:00").getTime();
+            const countDownDate = new Date("Apr 30, 2021 18:00:00").getTime();
 
             // aggiorna il timer ogni secondo
-            var x = setInterval(()=> {
+            const x = setInterval(()=> {
 
               // prende la data attuale
-              var now = new Date().getTime();
+              const now = new Date().getTime();
 
               // calcola il tempo mancante
-              var distance = countDownDate - now;
+              const distance = countDownDate - now;
+
 
               // converte i valori
-              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              const days = this.addZero(Math.floor(distance / (1000 * 60 * 60 * 24)));
+              const hours = this.addZero(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+              const minutes = this.addZero(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+              const seconds = this.addZero(Math.floor((distance % (1000 * 60)) / 1000));
 
               // aggiorna il valore del data
               this.countdown = days + ": " + hours + ": " + minutes + ": " + seconds;

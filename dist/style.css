@@ -44,6 +44,7 @@
   color: dimgray;
 }
 .homepage header nav ul li:hover {
+  cursor: pointer;
   color: #f0773c;
 }
 .homepage header nav .links {
@@ -74,23 +75,24 @@
   top: 80px;
   background: white;
   padding: 0 50px;
-  border-bottom: 2px solid orange;
+  border-bottom: 4px solid #ef6f31;
 }
 .homepage header nav .links li .dropdown ul {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 500px;
   margin: 0 50px;
 }
 .homepage header nav .links li .dropdown ul li {
   justify-content: flex-start;
   width: 200px;
   height: auto;
-  margin: 20px 0;
+  margin: 10px 0;
+  font-size: 16px;
 }
 .homepage header nav .links li .dropdown .image {
-  margin-left: 100px;
-}
-.homepage header nav .links li .first {
-  left: -420px;
+  margin-left: 150px;
 }
 .homepage header nav .links li:hover .dropdown {
   display: flex;
@@ -104,9 +106,24 @@
 }
 .homepage header nav .social li {
   margin-right: 30px;
+  position: relative;
 }
 .homepage header nav .social li i {
   font-size: 25px;
+}
+.homepage header nav .social li .name {
+  display: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 999;
+  top: 30px;
+  right: 0px;
+}
+.homepage header nav .social li:hover .name {
+  display: block;
 }
 .homepage header .fixed {
   width: 100%;
@@ -294,20 +311,18 @@
   padding: 50px 0;
 }
 .homepage .testimonials .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  width: 100%;
   height: 550px;
   padding: 0 10%;
+  position: relative;
 }
 .homepage .testimonials .row .module {
-  width: 33%;
+  width: 25%;
   height: 100%;
   border-radius: 5px;
-  padding: 50px;
+  padding: 40px 20px;
   background-color: white;
-  margin: 0 30px;
+  position: absolute;
 }
 .homepage .testimonials .row .module h2 {
   font-size: 20px;
@@ -317,6 +332,22 @@
 .homepage .testimonials .row .module p {
   font-size: 20px;
   line-height: 40px;
+}
+.homepage .testimonials .row .hide {
+  display: none;
+}
+.homepage .testimonials .row .position1 {
+  top: 10px;
+  left: 5%;
+}
+.homepage .testimonials .row .position2 {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.homepage .testimonials .row .position3 {
+  top: 10px;
+  right: 5%;
 }
 .homepage .testimonials .row .testimonial {
   display: flex;
@@ -338,12 +369,32 @@
   margin: 20px 0;
   color: dimgray;
 }
+.homepage .testimonials .row .overlay {
+  width: 25%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 10px;
+  z-index: 100;
+}
+.homepage .testimonials .row .left {
+  left: 5%;
+}
+.homepage .testimonials .row .right {
+  right: 5%;
+}
 .homepage .testimonials .dots {
   text-align: center;
   margin: 50px 0;
 }
 .homepage .testimonials .dots i {
   margin: 0 20px;
+  font-size: 12px;
+  color: dimgray;
+}
+.homepage .testimonials .dots .active {
+  font-size: 15px;
+  color: black;
 }
 .homepage .courses {
   padding: 50px;
