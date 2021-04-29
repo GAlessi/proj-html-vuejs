@@ -206,6 +206,8 @@ function initVue() {
     });
 
 }
+
+//allo scroll della pagina rende la nav fixed in cima
 function scrollNav() {
     $(document).bind('scroll', function () {
         if ($(document).scrollTop() > 130) {

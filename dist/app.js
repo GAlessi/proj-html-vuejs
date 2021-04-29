@@ -140,7 +140,8 @@ function initVue() {
       }, 1000);
     }
   });
-}
+} //allo scroll della pagina rende la nav fixed in cima
+
 
 function scrollNav() {
   $(document).bind('scroll', function () {
