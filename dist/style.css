@@ -926,7 +926,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: orange;
+  background-color: #ef6f31;
   color: white;
   display: none;
 }
@@ -954,12 +954,28 @@
 }
 .homepage .fixed .sideMenu li {
   margin: 10px 0;
+  position: relative;
 }
 .homepage .fixed .sideMenu li a {
   color: dimgray;
 }
 .homepage .fixed .sideMenu li a i {
   font-size: 20px;
+}
+.homepage .fixed .sideMenu li a .leftInfo {
+  display: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  right: 50px;
+  white-space: nowrap;
+}
+.homepage .fixed .sideMenu li a:hover .leftInfo {
+  display: block;
 }
 
 * {

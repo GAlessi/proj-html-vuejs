@@ -1,3 +1,5 @@
+
+//Vue
 function initVue() {
     new Vue({
         el:"#app",
@@ -207,6 +209,9 @@ function initVue() {
 
 }
 
+
+//JQuery
+
 //allo scroll della pagina rende la nav fixed in cima
 function scrollNav() {
     $(document).bind('scroll', function () {
@@ -218,6 +223,7 @@ function scrollNav() {
     });
 }
 
+//anima, all'interno delle sezioni, degli shape in base ai movimenti del mouse
 function follow() {
     $('.jumbotron').mousemove(function(event){
         let positionX = event.pageX;
@@ -245,6 +251,7 @@ function follow() {
     });
 }
 
+//in caso di scrollUp mostra un pulsante per tornare in cima alla homepage
 function scrollUp() {
     let lastScrollTop = 0;
     $(document).scroll(function(event){

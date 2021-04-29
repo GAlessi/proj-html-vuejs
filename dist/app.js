@@ -7,6 +7,7 @@
   \********************/
 /***/ (() => {
 
+//Vue
 function initVue() {
   new Vue({
     el: "#app",
@@ -140,7 +141,8 @@ function initVue() {
       }, 1000);
     }
   });
-} //allo scroll della pagina rende la nav fixed in cima
+} //JQuery
+//allo scroll della pagina rende la nav fixed in cima
 
 
 function scrollNav() {
@@ -151,7 +153,8 @@ function scrollNav() {
       $('nav').removeClass('fixed');
     }
   });
-}
+} //anima, all'interno delle sezioni, degli shape in base ai movimenti del mouse
+
 
 function follow() {
   $('.jumbotron').mousemove(function (event) {
@@ -172,7 +175,8 @@ function follow() {
     $('.shape12').get(0).style.setProperty("bottom", 50 + positionY / 15 + "px");
     $('.shape12').get(0).style.setProperty("right", 100 + positionX / 15 + "px");
   });
-}
+} //in caso di scrollUp mostra un pulsante per tornare in cima alla homepage
+
 
 function scrollUp() {
   var lastScrollTop = 0;
