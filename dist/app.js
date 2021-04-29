@@ -152,9 +152,23 @@ function scroll() {
   });
 }
 
+function follow() {
+  $('.jumbotron').mousemove(function (event) {
+    var positionX = event.pageX;
+    var positionY = event.pageY;
+    $('#hero4').get(0).style.setProperty("bottom", 25 + positionY / 8 + "px");
+    $('#hero4').get(0).style.setProperty("right", 120 + positionX / 8 + "px");
+    $('#hero2').get(0).style.setProperty("bottom", 120 + -positionY / 8 + "px");
+    $('#hero2').get(0).style.setProperty("left", 250 + -positionX / 8 + "px");
+    $('#hero1').get(0).style.setProperty("bottom", 120 + positionY / 10 + "px");
+    $('#hero1').get(0).style.setProperty("left", 230 + positionX / 10 + "px");
+  });
+}
+
 function init() {
   initVue();
   scroll();
+  follow();
 }
 
 $(init);

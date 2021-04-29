@@ -156,15 +156,17 @@
 .homepage .jumbotron {
   height: 650px;
   background-color: #fbf9f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
   position: relative;
+  width: 100%;
 }
 .homepage .jumbotron .sectionText {
   width: 45%;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 800;
+  transform: translate(-50%, -50%);
 }
 .homepage .jumbotron .sectionText .buttonPrimary {
   color: white;
@@ -206,6 +208,21 @@
   right: 160px;
   z-index: 120;
   zoom: 1.5;
+}
+.homepage .jumbotron #hero4 {
+  bottom: 120px;
+  right: 70px;
+  z-index: 500;
+}
+.homepage .jumbotron #hero2 {
+  bottom: 120px;
+  left: 250px;
+  z-index: 500;
+}
+.homepage .jumbotron #hero1 {
+  bottom: 120px;
+  left: 230px;
+  z-index: 510;
 }
 .homepage .artistCoaching {
   padding: 50px;
@@ -408,6 +425,8 @@
 }
 .homepage .courses .row .module {
   width: 300px;
+  position: relative;
+  height: 550px;
 }
 .homepage .courses .row .module .image {
   width: 100%;
@@ -430,6 +449,11 @@
   width: 250px;
   height: 250px;
   padding: 20px;
+  background-color: white;
+  position: static;
+  border: none;
+  bottom: 0;
+  transition: all 0.3s ease-in;
 }
 .homepage .courses .row .module .text .price {
   color: #ef6f31;
@@ -474,6 +498,12 @@
 }
 .homepage .courses .row .module .colored {
   background-image: url("img/artist-course-01-480x480.jpg");
+}
+.homepage .courses .row .module:hover .text {
+  position: absolute;
+  bottom: 80px;
+  border: 2px solid orange;
+  padding: 10px;
 }
 .homepage .courses .btncontainer {
   text-align: center;

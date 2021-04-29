@@ -140,13 +140,17 @@
     .jumbotron{
         height: 650px;
         background-color: rgb(251,249,246);
-        @include flex;
         position: relative;
+        width: 100%;
 
         .sectionText{
             width: 45%;
             text-align: center;
-
+            position: absolute;
+            top:50%;
+            left: 50%;
+            z-index: 800;
+            transform: translate(-50%, -50%);
             .buttonPrimary{
                 @include buttonPrimary;
                 padding: 15px 25px;
@@ -180,6 +184,21 @@
             right: 160px;
             z-index: 120;
             zoom: 1.5;
+        }
+        #hero4{
+            bottom: 120px;
+            right: 70px;
+            z-index: 500;
+        }
+        #hero2{
+            bottom: 120px;
+            left: 250px;
+            z-index: 500;
+        }
+        #hero1{
+            bottom: 120px;
+            left: 230px;
+            z-index: 510;
         }
     }
 
@@ -372,6 +391,8 @@
 
             .module{
                 width: 300px;
+                position: relative;
+                height: 550px;
 
                 .image{
                     width: 100%;
@@ -379,8 +400,6 @@
                     @include image;
 
                 }
-
-
                 .text{
                     @include flex;
                     flex-direction: column;
@@ -388,6 +407,11 @@
                     width: 250px;
                     height: 250px;
                     padding: 20px;
+                    background-color: white;
+                    position: static;
+                    border: none;
+                    bottom: 0;
+                    transition: all 0.3s ease-in;
 
                     .price{
                         color: rgb(239,111,49);
@@ -432,7 +456,14 @@
                 .colored{
                     background-image: url("img/artist-course-01-480x480.jpg");
                 }
+                &:hover .text{
+                    position: absolute;
+                    bottom: 80px;
+                    border: 2px solid orange;
+                    padding: 10px;
+                }
             }
+
         }
         .btncontainer{
             text-align: center;
