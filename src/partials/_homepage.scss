@@ -54,25 +54,33 @@
                     @include flex;
                     margin: 0;
                     padding: 0 20px;
+
                     i{
                         font-size: 10px;
                         margin-left: 5px;
                     }
-
+                    &:first-child .dropdown{
+                        left: -200px;
+                        ul{
+                            margin: 0 50px;
+                        }
+                    }
                     .dropdown{
                         display: none;
                         position: absolute;
                         z-index: 999;
                         top: 80px;
+                        left:5%;
                         background: white;
                         padding: 0 50px;
+                        border-left: 1px solid rgb(239,111,49);
+                        border-right: 1px solid rgb(239,111,49);
                         border-bottom: 4px solid rgb(239,111,49);
                         ul{
                             display: flex;
                             flex-direction: column;
                             flex-wrap: wrap;
                             max-height: 500px;
-                            margin: 0 50px;
                             li{
                                 justify-content: flex-start;
                                 width: 200px;
@@ -200,12 +208,53 @@
             left: 230px;
             z-index: 510;
         }
+        #hero3{
+            bottom: 30px;
+            left: 350px;
+            z-index: 410;
+        }
+        #shape05{
+            top: 30px;
+            left: 100px;
+            z-index: 110;
+            zoom: 2;
+        }
     }
 
 // sezione artisti
     .artistCoaching{
         padding: 50px;
+        position: relative;
 
+        #shape14{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: auto;
+        }
+        #shape13{
+            position: absolute;
+            z-index: -1;
+            top: 350px;
+            right: 0;
+            width: 20%;
+        }
+        .shape05{
+            position: absolute;
+            z-index: -1;
+            bottom: 650px;
+            left: 100px;
+            width: 20%;
+        }
+        .shape12{
+            position: absolute;
+            z-index: -1;
+            bottom: 50px;
+            right: 100px;
+            width: 20%;
+        }
         .row{
             @include flex;
             margin: 80px auto;
@@ -483,12 +532,22 @@
     .tips{
         background-color: rgb(245,247,250);
         padding: 50px;
+        position: relative;
 
+        .shape14{
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            zoom:4;
+        }
         .row{
             @include flex;
             justify-content: space-between;
 
             .sideModule{
+                position: relative;
+                z-index: 1;
                 .image{
                     width: 100%;
                     height: 220px;
@@ -548,6 +607,8 @@
                 padding: 450px 50px 0 50px;
                 color: white;
                 @include image;
+                position: relative;
+                z-index: 1;
 
                 .artist{
                     font-size: 20px;
@@ -656,12 +717,25 @@
         height: 200px;
         color: white;
         padding: 0 50px;
+        position: relative;
 
         h2{
             font-size: 40px;
             font-weight: 400;
             width: 20%;
             text-align: right;
+        }
+        img{
+            position: absolute;
+            height: 100%;
+        }
+        #shapeLeft{
+            top: 0;
+            left: 0;
+        }
+        #shapeRight{
+            bottom: 0;
+            right: 0;
         }
         .email{
             padding: 10px 0;
@@ -742,10 +816,25 @@
                 span{
                     color: rgb(239,111,49);
                 }
-                img{
+                .image{
                     width: 150px;
-                    height: auto;
+                    height: 150px;
                     margin: 15px 15px 15px 0;
+                    display: inline-block;
+                    background-size: contain;
+
+                    &:hover{
+                        filter: grayscale(1);
+                    }
+                }
+                #img1{
+                    background-image: url("img/120084500_197897808368764_8114555493043279565_n.jpg");
+                }
+                #img2{
+                    background-image: url("img/120012142_177596140500760_8623485824101406058_n.jpg");
+                }
+                #img3{
+                    background-image: url("img/120099363_364334431619755_7198812647386067017_n.jpg");
                 }
             }
         }
@@ -776,6 +865,27 @@
                 bottom: 135px;
             }
         }
+
+        #top{
+            position: fixed;
+            z-index: 900;
+            bottom: 50px;
+            right: 50px;
+            @include flex;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: orange;
+            color: white;
+            display: none;
+            i{
+                font-size: 30px;
+            }
+            &.active{
+                display: flex;
+            }
+        }
+
         .sideMenu{
             @include flex;
             width: auto;

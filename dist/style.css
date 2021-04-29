@@ -68,13 +68,22 @@
   font-size: 10px;
   margin-left: 5px;
 }
+.homepage header nav .links li:first-child .dropdown {
+  left: -200px;
+}
+.homepage header nav .links li:first-child .dropdown ul {
+  margin: 0 50px;
+}
 .homepage header nav .links li .dropdown {
   display: none;
   position: absolute;
   z-index: 999;
   top: 80px;
+  left: 5%;
   background: white;
   padding: 0 50px;
+  border-left: 1px solid #ef6f31;
+  border-right: 1px solid #ef6f31;
   border-bottom: 4px solid #ef6f31;
 }
 .homepage header nav .links li .dropdown ul {
@@ -82,7 +91,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 500px;
-  margin: 0 50px;
 }
 .homepage header nav .links li .dropdown ul li {
   justify-content: flex-start;
@@ -224,8 +232,49 @@
   left: 230px;
   z-index: 510;
 }
+.homepage .jumbotron #hero3 {
+  bottom: 30px;
+  left: 350px;
+  z-index: 410;
+}
+.homepage .jumbotron #shape05 {
+  top: 30px;
+  left: 100px;
+  z-index: 110;
+  zoom: 2;
+}
 .homepage .artistCoaching {
   padding: 50px;
+  position: relative;
+}
+.homepage .artistCoaching #shape14 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.homepage .artistCoaching #shape13 {
+  position: absolute;
+  z-index: -1;
+  top: 350px;
+  right: 0;
+  width: 20%;
+}
+.homepage .artistCoaching .shape05 {
+  position: absolute;
+  z-index: -1;
+  bottom: 650px;
+  left: 100px;
+  width: 20%;
+}
+.homepage .artistCoaching .shape12 {
+  position: absolute;
+  z-index: -1;
+  bottom: 50px;
+  right: 100px;
+  width: 20%;
 }
 .homepage .artistCoaching .row {
   display: flex;
@@ -528,6 +577,14 @@
 .homepage .tips {
   background-color: #f5f7fa;
   padding: 50px;
+  position: relative;
+}
+.homepage .tips .shape14 {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  zoom: 4;
 }
 .homepage .tips .row {
   display: flex;
@@ -535,6 +592,10 @@
   align-items: center;
   margin: auto;
   justify-content: space-between;
+}
+.homepage .tips .row .sideModule {
+  position: relative;
+  z-index: 1;
 }
 .homepage .tips .row .sideModule .image {
   width: 100%;
@@ -599,6 +660,8 @@
   background-position: center;
   background-size: 100%;
   transition: background-size 0.5s ease-in;
+  position: relative;
+  z-index: 1;
 }
 .homepage .tips .row .middleModule:hover {
   background-size: 110%;
@@ -706,12 +769,25 @@
   height: 200px;
   color: white;
   padding: 0 50px;
+  position: relative;
 }
 .homepage .newsletter h2 {
   font-size: 40px;
   font-weight: 400;
   width: 20%;
   text-align: right;
+}
+.homepage .newsletter img {
+  position: absolute;
+  height: 100%;
+}
+.homepage .newsletter #shapeLeft {
+  top: 0;
+  left: 0;
+}
+.homepage .newsletter #shapeRight {
+  bottom: 0;
+  right: 0;
 }
 .homepage .newsletter .email {
   padding: 10px 0;
@@ -797,10 +873,24 @@
 .homepage footer .row .instagram span {
   color: #ef6f31;
 }
-.homepage footer .row .instagram img {
+.homepage footer .row .instagram .image {
   width: 150px;
-  height: auto;
+  height: 150px;
   margin: 15px 15px 15px 0;
+  display: inline-block;
+  background-size: contain;
+}
+.homepage footer .row .instagram .image:hover {
+  filter: grayscale(1);
+}
+.homepage footer .row .instagram #img1 {
+  background-image: url("img/120084500_197897808368764_8114555493043279565_n.jpg");
+}
+.homepage footer .row .instagram #img2 {
+  background-image: url("img/120012142_177596140500760_8623485824101406058_n.jpg");
+}
+.homepage footer .row .instagram #img3 {
+  background-image: url("img/120099363_364334431619755_7198812647386067017_n.jpg");
 }
 .homepage footer .rights {
   margin-top: 100px;
@@ -823,6 +913,28 @@
 }
 .homepage .fixed .purchase:hover {
   bottom: 135px;
+}
+.homepage .fixed #top {
+  position: fixed;
+  z-index: 900;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: orange;
+  color: white;
+  display: none;
+}
+.homepage .fixed #top i {
+  font-size: 30px;
+}
+.homepage .fixed #top.active {
+  display: flex;
 }
 .homepage .fixed .sideMenu {
   display: flex;

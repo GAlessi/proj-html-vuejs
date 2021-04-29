@@ -142,7 +142,7 @@ function initVue() {
   });
 }
 
-function scroll() {
+function scrollNav() {
   $(document).bind('scroll', function () {
     if ($(document).scrollTop() > 130) {
       $('nav').addClass('fixed');
@@ -163,12 +163,40 @@ function follow() {
     $('#hero1').get(0).style.setProperty("bottom", 120 + positionY / 10 + "px");
     $('#hero1').get(0).style.setProperty("left", 230 + positionX / 10 + "px");
   });
+  $('.youtube').mousemove(function (event) {
+    var positionX = event.pageX;
+    var positionY = event.pageY;
+    $('.shape05').get(0).style.setProperty("bottom", 650 + -positionY / 15 + "px");
+    $('.shape05').get(0).style.setProperty("left", 100 + -positionX / 15 + "px");
+    $('.shape12').get(0).style.setProperty("bottom", 50 + positionY / 15 + "px");
+    $('.shape12').get(0).style.setProperty("right", 100 + positionX / 15 + "px");
+  });
+}
+
+function scrollUp() {
+  var lastScrollTop = 0;
+  $(document).scroll(function (event) {
+    var st = $(this).scrollTop();
+
+    if ($(this).scrollTop() > 0) {
+      if (st < lastScrollTop) {
+        $("#top").addClass("active");
+      } else {
+        $("#top").removeClass("active");
+      }
+    } else {
+      $("#top").removeClass("active");
+    }
+
+    lastScrollTop = st;
+  });
 }
 
 function init() {
   initVue();
-  scroll();
+  scrollNav();
   follow();
+  scrollUp();
 }
 
 $(init);

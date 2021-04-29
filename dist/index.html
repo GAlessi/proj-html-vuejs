@@ -79,6 +79,9 @@
                 <img src="img\artist-hero-image-04.jpg" id="hero4">
                 <img src="img\artist-hero-image-02.jpg" id="hero2">
                 <img src="img\artist-hero-image-01.jpg" id="hero1">
+                <img src="img\artist-hero-image-03.png" id="hero3">
+                <img src="img\maxcoach-shape-05-150x150.png" id="shape05">
+
 
             </div>
 
@@ -87,6 +90,10 @@
 
                 <!-- sezione artist -->
                 <section class="artistCoaching">
+                    <img src="img\maxcoach-shape-14-1024x229.png" id="shape14">
+                    <img src="img\maxcoach-shape-13-150x150.png" id="shape13">
+                    <img src="img\maxcoach-shape-05-150x150.png" class="shape05">
+                    <img src="img\maxcoach-shape-12-150x150.png" class="shape12">
                     <div class="sectionText">
                         <h2>Artist coaching</h2>
                         <h3>I understand what it takes to create. I can help you with</h3>
@@ -305,6 +312,8 @@
 
                 <!-- sezione Tips -->
                 <section class="tips">
+
+                    <img src="img\maxcoach-shape-14-1024x229.png" class="shape14">
                     <div class="sectionText">
                         <h2>Articles and Tips</h2>
                         <h3>Latest From The Blog</h3>
@@ -394,6 +403,8 @@
                 <!-- sezione Newsletter -->
                 <section class="newsletter">
                     <h2>Newsletter to get in touch</h2>
+                    <img src="img\artist-shape-color-paint-bottom-right-300x153.png" id="shapeRight">
+                    <img src="img\artist-shape-color-paint-top-left-300x170.png" id="shapeLeft">
                     <div class="email">
                         <input type="email" placeholder="Your e-mail">
                         <i class="fas fa-arrow-right"></i>
@@ -411,7 +422,7 @@
                         <h3>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</h3>
                         <h3>support@maxcoach.com</h3>
                         <ul class="social">
-                            <li v-for="social in socials"><i class="fab" :class="social"></i></li>
+                            <li v-for="social in socials"><i class="fab" :class="social.icon"></i></li>
                         </ul>
                     </div>
                     <div class="explore list">
@@ -430,9 +441,9 @@
                         <h2>Instagram</h2>
                         <span>@maxcoach</span>
                         <div class="img">
-                            <img src="img\120084500_197897808368764_8114555493043279565_n.jpg">
-                            <img src="img\120012142_177596140500760_8623485824101406058_n.jpg">
-                            <img src="img\120099363_364334431619755_7198812647386067017_n.jpg">
+                            <a href="#"><div class="image" id="img1"></div></a>
+                            <a href="#"><div class="image" id="img2"></div></a>
+                            <a href="#"><div class="image" id="img3"></div></a>
                         </div>
                     </div>
                 </div>
@@ -444,6 +455,8 @@
 
             <section class="fixed">
                 <a href="#"><span class="purchase">Purchase Now</span></a>
+                <a href="#"><div id="top"><i class="fas fa-arrow-up"></i></div></a>
+
                 <ul class="sideMenu">
                     <li><a href="#"><i class="fas fa-exclamation-triangle"></i></a></li>
                     <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
